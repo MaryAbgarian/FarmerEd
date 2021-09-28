@@ -1,0 +1,103 @@
+<!Doctype html>
+<html>
+<!-- gray red pink-->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Farmer Ed</title>
+	<link rel="shortcut icon" href="img/BRAIN2.png">
+
+<!-- 	<link rel="stylesheet" href="css/styles.css">
+-->	<style>
+
+
+	body{
+		background-color: black;
+	}
+	.container{
+		position: relative;
+	}
+	img{
+		position: absolute;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+
+	}
+	#title{
+		width: 36%;
+		z-index: -1;
+	}
+
+
+</style>
+</head>
+<body>
+	<br><br><br><br><br><br>
+	<div class="container">
+<!-- 		<h2><strong>Azwan Films</strong></h2>
+-->		<img src="img/GLASS.jpg" id="g" style="width: 0;">	 
+<img src="img/BLOOD2.png" id="bl" style="width: 0;">
+<a href="filmdeck.html"><img src="img/BRAIN2.png" id="br" style="width: 0;"> </a>
+
+<h1><img id="title" src="img/Farmer_Ed.png"></h1>
+
+</div>
+</body>
+<script>
+//	var h1=document.getElementsById("id");
+//	h1.style.opacity="0";
+
+
+var img =document.getElementById("br");
+	// document.getElementById("br").src="img/BRAIN_Inverted.png";
+
+
+img.onmouseover = function() {  img.src = "img/BRAIN3.png"; }
+img.onmouseout = function() {  img.src = "img/BRAIN2.png"; }
+img.onmousedown = function () {img.src = "img/BRAIN_Inverted.png"; 
+ // img3.style.width="40%"; img3.style.border="thin solid rgba(128,128,128, 0.3)";	
+
+
+}
+
+// function handleDown() {  img.src = "img/BRAIN3.png"; return true; }
+// function  handleUp() {  img.src = "img/BRAIN_Inverted.png"; return true; }
+
+var img2 =document.getElementById("bl");
+img2.style.width="0";
+var img3 =document.getElementById("g");
+img3.style.width="0";
+
+
+for(var i=0; i<=400; i++)
+{
+	setTimeout(function(){ img.style.width=(i/10.).toString()+"%";}, 1000);
+
+}
+for(var i=0; i<=400; i++)
+{
+	setTimeout(function(){ img2.style.width=(i/10.).toString()+"%" }, 1300);
+
+}
+
+
+// setTimeout(function(){ h1.style.visibility="visible"; }, 3000);
+
+
+if(img3.style.width=="0px"){
+	img3.style.width="none";
+	console.log("here");
+		console.log(img3.style.width);
+
+}
+function invert()
+{
+	img.src="img/BRAIN_Inverted.png";
+
+}
+
+
+</script>
+</html>
